@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejerciciosHerencia;
+
+/**
+ *
+ * @author usuario
+ */
+public class LibrosEstante extends Libro{
+    private int estante;
+    private boolean prestamo;
+
+    public LibrosEstante() {
+        this(0,"", "", "", 0);
+    }
+
+    public LibrosEstante(int estante, String nombre, String autor, String edicion, int hojas) {
+        super(nombre, autor, edicion, hojas);
+        this.estante = estante;
+    }
+
+    public int getEstante() {
+        return estante;
+    }
+
+    public void setEstante(int estante) {
+        this.estante = estante;
+    }
+
+    public boolean isPrestamo() {
+        return prestamo;
+    }
+
+    public void setPrestamo(boolean prestamo) {
+        this.prestamo = prestamo;
+    }
+    
+    
+
+    @Override
+    public String toString() {
+        return super.toString() + "LibrosEstante{" + "estante=" + estante + '}';
+    }
+
+    
+}
