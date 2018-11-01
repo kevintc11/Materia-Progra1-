@@ -9,7 +9,7 @@ package ejerciciosHerencia;
  *
  * @author usuario
  */
-public class Libro {
+public abstract class Libro {
     private String nombre;
     private String autor;
     private String edicion;
@@ -62,5 +62,5 @@ public class Libro {
         return "Libro{" + "nombre=" + nombre + ", autor=" + autor + ", edicion=" + edicion + ", hojas=" + hojas + '}';
     }
     
-    
+    public abstract int tiempoPrestamo();
 }

@@ -11,7 +11,7 @@ package ejerciciosHerencia;
  */
 public class LibrosSala extends Libro{
     private String nombreSala;
-
+    
 
     public LibrosSala() {
        this("","","",0,"");
@@ -32,8 +32,16 @@ public class LibrosSala extends Libro{
 
     @Override
     public String toString() {
-        return super.toString() + "LibrosSala{" + "nombreSala=" + nombreSala + '}';
+        return "LibrosSala{"+ super.toString() + "nombreSala=" + nombreSala + '}';
     }
     
-    
+    @Override
+    public int tiempoPrestamo(){
+        int tiempo;
+        tiempo = (1 + getHojas()) / 100;
+        if (tiempo > 30) {
+            return 30;
+        }
+        return tiempo;
+    }
 }

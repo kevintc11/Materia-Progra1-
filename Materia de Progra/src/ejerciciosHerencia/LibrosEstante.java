@@ -42,8 +42,22 @@ public class LibrosEstante extends Libro{
 
     @Override
     public String toString() {
-        return super.toString() + "LibrosEstante{" + "estante=" + estante + '}';
+        return "LibrosEstante{" + super.toString() + "estante=" + estante + '}';
     }
 
-    
+    @Override
+    public int tiempoPrestamo(){
+        int tiempo;
+        if (isPrestamo() == true) {
+            return 24;
+        }
+        tiempo = getHojas() / 100;
+        if (tiempo <= 6) {
+            if(tiempo == 0){
+                return 1;
+            }
+            return tiempo;
+        }
+        return 0;
+    }
 }
