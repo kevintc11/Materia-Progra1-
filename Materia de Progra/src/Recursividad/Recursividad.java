@@ -5,11 +5,26 @@
  */
 package Recursividad;
 
+
 /**
  *
  * @author usuario
  */
 public class Recursividad {
+
+    public static void main(String[] args) {
+        System.out.println(sumatoria(5));
+     
+    }
+            
+    public static int sumatoria(int n){
+        if (n <= 1) {
+            return n;
+        }else{
+            return n + sumatoria(n-1);
+        }
+    }
     
     
 }
+   
