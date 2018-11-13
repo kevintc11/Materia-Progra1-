@@ -13,8 +13,8 @@ package Recursividad;
 public class Recursividad {
 
     public static void main(String[] args) {
-        System.out.println(sumatoria(5));
-     
+        //System.out.println(sumatoria(5));
+        System.out.println(divisionPorResta(10, 2));
     }
             
     public static int sumatoria(int n){
@@ -25,6 +25,20 @@ public class Recursividad {
         }
     }
     
+    public static int divisionPorResta(int n, int x){
+        int counter = 0;
+        if (n < x) {
+            //n-x es el caso base, se suma 1 para un contador
+            //counter += 1;
+            return counter;
+        } else {
+            //counter = (n-x);
+            return (counter + 1)  + divisionPorResta(n-x, x);
+        }
+    }
     
+    public static int fibonacci(){
+        //Caso base: "" +(a,b),   0+1=1, 1+1=2, 1+2=3, 3+2=5, 5+3=8
+    }
 }
    
