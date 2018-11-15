@@ -14,7 +14,10 @@ public class Recursividad {
 
     public static void main(String[] args) {
         //System.out.println(sumatoria(5));
-        System.out.println(divisionPorResta(10, 2));
+        //System.out.println(divisionPorResta(10, 2));
+        //System.out.println(fibonacci(0, 1, 13));
+        //System.out.println(decimalBinario(10));
+        System.out.println(sumarDigitos(123));
     }
             
     public static int sumatoria(int n){
@@ -37,8 +40,31 @@ public class Recursividad {
         }
     }
     
-    public static int fibonacci(){
+    public static String fibonacci(int n, int x, int finalValor){
         //Caso base: "" +(a,b),   0+1=1, 1+1=2, 1+2=3, 3+2=5, 5+3=8
+        int c = 0;
+        if (n + x == finalValor) {
+            return "" + finalValor;
+        } else {
+            c = n+x;
+            return + n + "+"+ x + "=" + c + "\n" + fibonacci(x, (n + x), finalValor);
+        }
+    }
+    
+    public static String decimalBinario(int n){
+        if (n == 0) {
+            return ""; 
+        } else {
+            return decimalBinario(n/2) + (n%2);
+        }
+    }
+    
+    public static int sumarDigitos(int n){
+        if (n < 1) {
+            return n; 
+        } else {
+            return sumarDigitos(n/10) + n%10;
+        }
     }
 }
    
