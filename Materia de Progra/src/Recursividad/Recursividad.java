@@ -63,7 +63,7 @@ public class Recursividad {
         if (n < 1) {
             return n; 
         } else {
-            return sumarDigitos(n/10) + n%10;
+            return n%10 + sumarDigitos(n/10);
         }
     }
 }
